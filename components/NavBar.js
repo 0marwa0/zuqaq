@@ -1,6 +1,28 @@
 import { Tooltip } from "antd";
+import { useState } from "react";
 
-const NavBar = () => {
+function NavBar(props) {
+  const [selectFina, setSelectedFina] = useState(false);
+  const [selectedNotif, setSelectedNotif] = useState(false);
+  const [selectedSearch, setSelectedSearch] = useState(false);
+  const SelectFina = () => {
+    props.fun();
+    setSelectedFina(true);
+    setSelectedNotif(false);
+    setSelectedSearch(false);
+  };
+  const SelectNotif = () => {
+    props.fun();
+    setSelectedFina(false);
+    setSelectedNotif(true);
+    setSelectedSearch(false);
+  };
+  const SelectSearch = () => {
+    props.fun();
+    setSelectedFina(false);
+    setSelectedNotif(false);
+    setSelectedSearch(true);
+  };
   return (
     <div className="navBar">
       <div>
@@ -11,11 +33,11 @@ const NavBar = () => {
         </Tooltip>
         <ul>
           <Tooltip title="Finanical" placement="right">
-            <li>
+            <li onClick={SelectFina} className={selectFina ? "selectLi" : ""}>
               <svg
                 viewBox="64 64 896 896"
                 focusable="false"
-                class=""
+                className=""
                 data-icon="dollar"
                 width="1em"
                 height="1em"
@@ -28,12 +50,12 @@ const NavBar = () => {
           </Tooltip>
 
           <Tooltip title="Notifications" placement="right">
-            <li>
+            <li onClick={props.fun}>
               {" "}
               <svg
                 viewBox="64 64 896 896"
                 focusable="false"
-                class=""
+                className=""
                 data-icon="bell"
                 width="1em"
                 height="1em"
@@ -46,11 +68,11 @@ const NavBar = () => {
           </Tooltip>
 
           <Tooltip title="Search" placement="right">
-            <li>
+            <li onClick={props.fun}>
               <svg
                 viewBox="64 64 896 896"
                 focusable="false"
-                class=""
+                className=""
                 data-icon="search"
                 width="1em"
                 height="1em"
@@ -69,6 +91,6 @@ const NavBar = () => {
       </div>
     </div>
   );
-};
+}
 
 export default NavBar;
