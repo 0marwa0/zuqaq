@@ -1,0 +1,108 @@
+.navBar {
+  background-color: #24292d;
+  position: fixed;
+  color: white;
+  height: 100%;
+  display: flex;
+  z-index: 2;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav_logo {
+  padding: 0 10px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.navBar ul {
+  list-style: none;
+  padding: 0;
+
+  text-align: center;
+}
+.navBar ul li {
+  margin: 10px 0px;
+  // padding: 10px 0;
+  font-size: 24px;
+  color: rgb(192, 194, 196);
+
+  border-left: 3px solid #24292d;
+  cursor: pointer;
+}
+
+.navBar ul li:hover {
+  border-left: 3px solid #1890ff;
+}
+.user_image {
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+  border-radius: 100%;
+}
+.user_image img {
+  width: auto;
+  position: relative;
+  height: 100%;
+}
+.user_image .active {
+  position: absolute;
+  left: 30;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 80%;
+  background-color: rgb(114, 245, 114);
+}
+
+.slideNav {
+  background-color: #fbfbfb;
+  width: 350px;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  position: fixed;
+  padding-top: 2rem;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  font-size: 1rem;
+  border-right: 2px solid #f1f1f1;
+}
+.slideNav a {
+  color: black;
+}
+
+.slide_head {
+  display: flex;
+  height: 30px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.slide_icon {
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 5px;
+  margin: 0 10px;
+  padding: 5px;
+  background-color: #24292d;
+}
+.slideNav ul {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.slideNav li {
+  transition: all 0.15s;
+  padding: 10px;
+  width: 170px;
+  border-radius: 5px;
+  margin: 3px 0;
+  cursor: pointer;
+}
+.slideNav .active,
+.slideNav li:hover {
+  background-color: #f1f2f7 !important;
+}
