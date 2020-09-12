@@ -29,8 +29,8 @@ const columns = [
     },
   },
   {
-    title: "Munafio",
-    dataIndex: "Munafio",
+    title: "Amount",
+    dataIndex: "Amount",
     sorter: {
       compare: (a, b) => a.english - b.english,
       multiple: 1,
@@ -50,9 +50,9 @@ const data = [
   {
     key: "1",
     Title: "John Brown",
-    Category: 98,
-    Payee: 60,
-    Munafio: 70,
+    Category: "Rent...",
+    Payee: "Munafio",
+    Amount: "62,500 IQD",
     Data: "Mon ,Aug ..",
   },
 ];
@@ -66,7 +66,7 @@ const Expanses = () => {
     <div className="content">
       <Button
         type="primary"
-        style={{ marginBottom: "15px" }}
+        style={{ marginBottom: "15px", backgroundColor: "#1890ff" }}
         icon={<PlusOutlined />}
       >
         Add Expenses
