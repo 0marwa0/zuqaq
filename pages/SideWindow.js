@@ -1,0 +1,111 @@
+import "../Styles/Filter.less";
+import { Layout, Breadcrumb } from "antd";
+
+const { Header, Footer, Sider, Content } = Layout;
+import { GiDividedSpiral } from "react-icons/gi";
+import antd from "antd";
+import { DownOutlined, UserOutlined } from "@ant-design/icons";
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+const { Menu, Dropdown, Button } = antd;
+
+const menu = (
+  <Menu>
+    <Menu.Item key="1" icon={<UserOutlined />}>
+      1st menu item
+    </Menu.Item>
+    <Menu.Item key="2" icon={<UserOutlined />}>
+      2nd menu item
+    </Menu.Item>
+    <Menu.Item key="3" icon={<UserOutlined />}>
+      3rd menu item
+    </Menu.Item>
+  </Menu>
+);
+function index() {
+  return (
+    <div className="window_page">
+      <div className="window_title">
+        {" "}
+        <p>Items List </p> <p>...</p>
+      </div>
+      <div className="item_container">
+        <div className="window_item">
+          <img width="50px" height="50px" src="../static/images/Teshert.webp" />
+          <div className="window_text">
+            <div>Arap nas , white -FS</div>
+            <div>45,000 IQD</div>
+          </div>
+
+          <div className="window_ctrl">
+            <span className="ai_window">
+              <AiOutlineMinus />
+            </span>
+            <div className="item_num">10</div>
+            <span className="ai_window">
+              <AiOutlinePlus />
+            </span>
+          </div>
+          <div>
+            <GiDividedSpiral
+              size="20"
+              style={{ marginLeft: "20px" }}
+              color="rgb(89, 161, 228)"
+            />
+          </div>
+        </div>
+
+        <div className="window_item">
+          <img width="50px" height="50px" src="../static/images/Teshert.webp" />
+          <div className="window_text">
+            <div>Arap nas , white -FS</div>
+            <div>45,000 IQD</div>
+          </div>
+
+          <div className="window_ctrl">
+            <span className="ai_window">
+              <AiOutlineMinus />
+            </span>
+            <div className="item_num">20</div>
+            <span className="ai_window">
+              <AiOutlinePlus />
+            </span>
+          </div>
+          <div>
+            <GiDividedSpiral
+              size="20"
+              style={{ marginLeft: "20px" }}
+              color="rgb(201, 194, 194)"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="discount">
+        {" "}
+        <Dropdown overlay={menu}>
+          <Button style={{ width: "380px", textAlign: "left" }}>
+            Button <DownOutlined style={{ marginLeft: "85%" }} />
+          </Button>
+        </Dropdown>
+      </div>
+      <div className="check">
+        <ul>
+          <li>Sub-total:</li>
+          <li>Disocunt:</li>
+          <li>Tax</li>
+        </ul>
+        <ul>
+          <li>1.350,000 IQD</li>
+          <li>000 IQD</li>
+          <li>000 IQD</li>
+        </ul>
+      </div>
+      <div className="window_title">
+        {" "}
+        <p>Total:</p>
+        <p className="price">1,350,000 IQD</p>
+      </div>
+    </div>
+  );
+}
+
+export default index;
