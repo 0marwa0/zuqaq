@@ -24,6 +24,12 @@ const menu = (
 );
 function index() {
   return (
+    // <Layout>
+    //   <Sider
+    //     style={{
+    //       zIndex: 999,
+    //     }}
+    //   >
     <div className="window_page">
       <div className="window_title">
         {" "}
@@ -84,32 +90,35 @@ function index() {
           </div>
         </div>
       </div>
-      <div className="discount">
-        {" "}
-        <Dropdown overlay={menu}>
-          <Button style={{ width: "380px", textAlign: "left" }}>
-            Button <DownOutlined style={{ marginLeft: "85%" }} />
-          </Button>
-        </Dropdown>
-      </div>
-      <div className="check">
-        <ul>
-          <li>Sub-total:</li>
-          <li>Disocunt:</li>
-          <li>Tax</li>
-        </ul>
-        <ul>
-          <li>1.350,000 IQD</li>
-          <li>000 IQD</li>
-          <li>000 IQD</li>
-        </ul>
-      </div>
-      <div className="window_title">
-        {" "}
-        <p>Total:</p>
-        <p className="price">1,350,000 IQD</p>
+      <div className="window_footer">
+        <div className="discount">
+          <Dropdown overlay={menu}>
+            <Button style={{ width: "380px", textAlign: "left" }}>
+              Button <DownOutlined style={{ marginLeft: "85%" }} />
+            </Button>
+          </Dropdown>
+        </div>
+        <div className="check">
+          <ul>
+            <li>Sub-total:</li>
+            <li>Disocunt:</li>
+            <li>Tax</li>
+          </ul>
+          <ul>
+            <li>1.350,000 IQD</li>
+            <li>000 IQD</li>
+            <li>000 IQD</li>
+          </ul>
+        </div>
+        <div className="window_title">
+          {" "}
+          <p>Total:</p>
+          <p className="price">1,350,000 IQD</p>
+        </div>
       </div>
     </div>
+    //   </Sider>
+    // </Layout>
   );
 }
 

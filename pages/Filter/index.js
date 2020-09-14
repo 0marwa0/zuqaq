@@ -1,6 +1,8 @@
 import { Button } from "antd";
 import antd from "antd";
+import { Layout, Breadcrumb } from "antd";
 
+const { Header, Footer, Sider, Content } = Layout;
 import { FaGreaterThan, FaLessThan } from "react-icons/fa";
 import { useState } from "react";
 import "../../Styles/Filter.less";
@@ -149,9 +151,10 @@ function Filter() {
               key={i}
               style={{
                 overflow: "hidden",
-                width: 230,
+                width: "100%",
+                flex: "none",
                 borderRadius: 5,
-                height: 200,
+                height: "250px",
               }}
               cover={
                 <img
@@ -159,7 +162,7 @@ function Filter() {
                   width="100%"
                   display="block"
                   border-radius="30px"
-                  height="120px"
+                  height="auto"
                   object-fit="cover"
                   src={item.src}
                 />

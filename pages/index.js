@@ -32,8 +32,10 @@ const index = () => {
 
   return (
     <div>
-      <Filter />
-      <SideWindow />
+      <div className="Main_container">
+        <Filter />
+        <SideWindow />
+      </div>
       <Layout>
         <Footer
           style={{
@@ -63,7 +65,6 @@ const index = () => {
         </Footer>
       </Layout>
       {/* {show ? <div className="progres_bar"></div> : null}
-
       <NavBar fun={showProgrss} />
       <SlideNav fun={showProgrss} /> */}
     </div>
