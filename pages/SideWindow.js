@@ -6,6 +6,7 @@ import { GiDividedSpiral } from "react-icons/gi";
 import antd from "antd";
 import { DownOutlined, UserOutlined } from "@ant-design/icons";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+import { BsThreeDots } from "react-icons/bs";
 const { Menu, Dropdown, Button } = antd;
 
 const menu = (
@@ -26,13 +27,15 @@ function index() {
     <div className="window_page">
       <div className="window_title">
         {" "}
-        <p>Items List </p> <p>...</p>
+        <p>Items List </p> <BsThreeDots style={{ marginTop: "8px" }} />
       </div>
       <div className="item_container">
         <div className="window_item">
-          <img width="50px" height="50px" src="../static/images/Teshert.webp" />
+          <img width="50px" height="50px" src="../static/images/t.jfif" />
           <div className="window_text">
-            <div>Arap nas , white -FS</div>
+            <span>
+              Araq nas , white <span style={{ color: "#c5c7c9" }}>-FS </span>
+            </span>
             <div>45,000 IQD</div>
           </div>
 
@@ -55,9 +58,11 @@ function index() {
         </div>
 
         <div className="window_item">
-          <img width="50px" height="50px" src="../static/images/Teshert.webp" />
+          <img width="50px" height="50px" src="../static/images/t.jfif" />
           <div className="window_text">
-            <div>Arap nas , white -FS</div>
+            <span>
+              Araq nas , white <span style={{ color: "#c5c7c9" }}>-FS </span>
+            </span>
             <div>45,000 IQD</div>
           </div>
 

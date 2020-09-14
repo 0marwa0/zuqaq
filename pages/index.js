@@ -1,5 +1,5 @@
-import { Layout, Menu, Breadcrumb } from "antd";
-
+import { Layout, Menu, Breadcrumb, Button } from "antd";
+import { BsList } from "react-icons/bs";
 const { Header, Footer, Sider, Content } = Layout;
 import {
   UserOutlined,
@@ -38,12 +38,29 @@ const index = () => {
         <Footer
           style={{
             width: "100%",
+            height: "8%",
+            padding: "12px 35px",
             position: "fixed",
             bottom: 0,
             backgroundColor: "#24292e",
             zIndex: "9999",
           }}
-        />
+        >
+          <div className="footer">
+            <span>
+              <BsList
+                color="white"
+                style={{
+                  marginBottom: "5px",
+                  marginTop: "5px",
+                  marginRight: "5px",
+                }}
+              />
+              <p>Home</p>
+            </span>
+            <Button type="primary">checkout</Button>
+          </div>
+        </Footer>
       </Layout>
       {/* {show ? <div className="progres_bar"></div> : null}
 
