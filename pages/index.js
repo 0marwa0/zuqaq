@@ -44,6 +44,9 @@ const index = () => {
             padding: "12px 35px",
             position: "fixed",
             bottom: 0,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
             backgroundColor: "#24292e",
             zIndex: "9999",
           }}
@@ -58,7 +61,7 @@ const index = () => {
                   marginRight: "5px",
                 }}
               />
-              <p>Home</p>
+              <span>Home</span>
             </span>
             <Button type="primary">checkout</Button>
           </div>

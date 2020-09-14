@@ -37,7 +37,7 @@ function index() {
       </div>
       <div className="item_container">
         <div className="window_item">
-          <img width="50px" height="50px" src="../static/images/t.jfif" />
+          <img width="90px" height="auto" src="../static/images/t.jfif" />
           <div className="window_text">
             <span>
               Araq nas , white <span style={{ color: "#c5c7c9" }}>-FS </span>
@@ -64,7 +64,7 @@ function index() {
         </div>
 
         <div className="window_item">
-          <img width="50px" height="50px" src="../static/images/t.jfif" />
+          <img width="90px" height="auto" src="../static/images/t.jfif" />
           <div className="window_text">
             <span>
               Araq nas , white <span style={{ color: "#c5c7c9" }}>-FS </span>
@@ -93,8 +93,8 @@ function index() {
       <div className="window_footer">
         <div className="discount">
           <Dropdown overlay={menu}>
-            <Button style={{ width: "380px", textAlign: "left" }}>
-              Button <DownOutlined style={{ marginLeft: "85%" }} />
+            <Button style={{ textAlign: "left", width: "100%" }}>
+              Discount <DownOutlined style={{ float: "right" }} />
             </Button>
           </Dropdown>
         </div>
@@ -112,7 +112,7 @@ function index() {
         </div>
         <div className="window_title">
           {" "}
-          <p>Total:</p>
+          Total:
           <p className="price">1,350,000 IQD</p>
         </div>
       </div>

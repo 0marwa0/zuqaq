@@ -154,7 +154,7 @@ function Filter() {
                 width: "100%",
                 flex: "none",
                 borderRadius: 5,
-                height: "250px",
+                height: "auto",
               }}
               cover={
                 <img

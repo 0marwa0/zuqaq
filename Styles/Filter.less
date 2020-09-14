@@ -1,6 +1,8 @@
 .filter_page {
-  margin-right: 10% !important;
+  margin-right: 10px !important;
   margin-left: 3%;
+
+  width: 70%;
 }
 * {
   padding: 0px;
@@ -13,7 +15,7 @@
   justify-content: space-between;
 }
 .filter_head {
-  width: 92%;
+  width: 89%;
   display: flex;
   gap: 15px;
   margin-top: 2rem;
@@ -77,18 +79,19 @@
 }
 .window_footer {
   bottom: 10%;
-
+  width: inherit;
   background-color: #fafbfc;
   position: fixed;
 }
 .window_page {
-  width: auto;
+  width: 30%;
   z-index: 999;
   top: 0;
   bottom: 0;
   right: 0;
   position: fixed;
   height: 100%;
+  z-index: 999;
   border-left: 1px solid #e8ebed;
   flex-direction: column;
   float: right;
@@ -97,7 +100,7 @@
 }
 .window_title {
   display: flex;
-  width: 400px;
+  width: 100%;
   padding: 0px 10px;
   // margin-top: 20px;
   font-size: 18px;
@@ -122,12 +125,12 @@
 .window_item {
   padding: 10px 10px;
   display: grid;
-  width: 400px;
+  width: 100%;
   gap: 10px;
   align-items: center;
   background-color: #fafbfc;
 
-  grid-template-columns: max-content 0.8fr 0.3fr 0.2fr;
+  grid-template-columns: 0.2fr auto auto auto;
   border-bottom: 1px solid #e8ebed;
 }
 
@@ -137,7 +140,7 @@
   font-size: 14px;
   background-color: #fafbfc;
 
-  grid-template-columns: auto;
+  grid-template-columns: max-content;
 }
 .window_text > div {
   height: 20px;
@@ -146,7 +149,7 @@
   display: flex;
   font-size: 17px;
   background-color: #fafbfc;
-
+  justify-content: center;
   align-items: center;
 }
 .item_num {
@@ -159,10 +162,11 @@
   border-top: 1px solid #e8ebed;
   display: flex;
   flex-direction: row;
-  gap: 200px;
-  background-color: #fafbfc;
 
+  background-color: #fafbfc;
+  justify-content: space-between;
   padding: 10px;
+  width: 100%;
 }
 .check ul {
   font-size: 15px;
@@ -177,11 +181,28 @@
 .footer {
   display: flex;
   color: white;
-
+  align-items: center;
+  width: 100%;
+  height: max-content;
   justify-content: space-between;
 }
 .footer span {
   display: flex;
   font-size: large;
   justify-content: center;
+}
+@media only screen and (max-width: 1248px) {
+  .window_page {
+    width: 55%;
+  }
+}
+@media only screen and (max-width: 758px) {
+  .window_page {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 618px) {
+  .window_page {
+    width: 75%;
+  }
 }
