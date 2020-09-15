@@ -33,7 +33,7 @@ function index() {
     <div className="window_page">
       <div className="window_title">
         {" "}
-        <p>Items List </p> <BsThreeDots style={{ marginTop: "8px" }} />
+        <p>Items List </p> <BsThreeDots style={{ marginTop: "-10px" }} />
       </div>
       <div className="item_container">
         <div className="window_item">
@@ -112,7 +112,7 @@ function index() {
         </div>
         <div className="window_title">
           {" "}
-          Total:
+          <p>Total:</p>
           <p className="price">1,350,000 IQD</p>
         </div>
       </div>
