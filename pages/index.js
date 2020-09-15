@@ -15,6 +15,7 @@ import SlideNav from "../components/SlideNav";
 import SideWindow from "../pages/SideWindow.js";
 import NavBar from "../components/NavBar";
 import { useState } from "react";
+import Graph from "./Graph";
 // const { Layout, Menu, Breadcrumb } = antd;
 // const { UserOutlined, LaptopOutlined, NotificationOutlined } = icons;
 
@@ -32,7 +33,7 @@ const index = () => {
 
   return (
     <div>
-      <div className="Main_container">
+      {/* <div className="Main_container">
         <Filter />
         <SideWindow />
       </div>
@@ -66,10 +67,18 @@ const index = () => {
             <Button type="primary">checkout</Button>
           </div>
         </Footer>
-      </Layout>
-      {/* {show ? <div className="progres_bar"></div> : null}
-      <NavBar fun={showProgrss} />
-      <SlideNav fun={showProgrss} /> */}
+      </Layout> */}
+      {/* {show ? <div className="progres_bar"></div> : null} */}
+
+      {/* <NavBar fun={showProgrss} /> */}
+      {/* <SlideNav fun={showProgrss} /> */}
+      {/**graph ui */}
+      <div className="Main_container">
+        <NavBar fun={showProgrss} />
+        <div id="sildeNav"></div>
+
+        <Graph />
+      </div>
     </div>
   );
 };
