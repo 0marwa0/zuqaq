@@ -109,10 +109,17 @@ const Expanses = () => {
           onChange={onChange}
           className="table"
         
-          pagination={{
+          pagination={
+          
+           
+            {
                    
                     total: 20,
-                    style:{padding:"0 20px",fontWeight:"500"},
+                    style:{
+                      display:"flex",
+                  
+                     color:"gray",
+                      padding:"0 20px",},
                     // pageSizeOptions: ["10", "20", "50"],
                     
                     showTotal: total => `View search for 1 from 2 search we got.`,
