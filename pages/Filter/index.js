@@ -7,6 +7,7 @@ import { FaGreaterThan, FaLessThan } from "react-icons/fa";
 import { useState } from "react";
 import "../../Styles/Filter.less";
 import { RightOutlined,LeftOutlined } from "@ant-design/icons";
+import FilterButtons from "../../components/carousel";
 const { Card } = antd;
 const { Meta } = Card;
  const settings = {
@@ -195,8 +196,7 @@ export default class Filter extends React.Component {
         
 
      
-     	   <Carousel >  <div>sfofo</div> <div>sf222</div> <div>333</div><div>sfofo</div> <div>sf222</div> <div>333</div></Carousel>
-          {/* <div className="fa_wrapper2" 
+<FilterButtons/>          {/* <div className="fa_wrapper2" 
            
           >
             <RightOutlined

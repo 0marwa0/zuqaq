@@ -1,4 +1,7 @@
 import { Layout, Menu, Breadcrumb, Button } from "antd";
+
+
+
 import { BsList } from "react-icons/bs";
 const { Header, Footer, Sider, Content } = Layout;
 import {
@@ -7,6 +10,7 @@ import {
   NotificationOutlined,
 } from "@ant-design/icons";
 import Filter from "../pages/Filter";
+
 const { SubMenu } = Menu;
 
 import Link from "next/link";
@@ -15,6 +19,7 @@ import SlideNav from "../components/SlideNav";
 import SideWindow from "../pages/SideWindow.js";
 import NavBar from "../components/NavBar";
 import { useState } from "react";
+import FilterButtons from "../components/carousel.js"
 // const { Layout, Menu, Breadcrumb } = antd;
 // const { UserOutlined, LaptopOutlined, NotificationOutlined } = icons;
 
@@ -32,9 +37,12 @@ const index = () => {
 
   return (
     <div>
-      <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
+      {/* <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
         <h1>still working on it ...</h1>
-      </div>
+
+      </div> */}
+
+      <FilterButtons/>  
       {/* <div className="Main_container">
         <Filter />
         <SideWindow />
@@ -73,6 +81,7 @@ const index = () => {
           </div>
         </Footer>
       </Layout> */}
+      {/* https://codesandbox.io/s/async-breeze-jxsd4?file=/src/index.js */}
       {/* {show ? <div className="progres_bar"></div> : null}
       <NavBar fun={showProgrss} />
       <SlideNav fun={showProgrss} /> */}
