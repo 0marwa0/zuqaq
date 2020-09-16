@@ -1,15 +1,21 @@
 import { Button } from "antd";
 import antd from "antd";
-import { Layout, Breadcrumb } from "antd";
-
+import { Layout, Breadcrumb,Carousel } from "antd";
+import Slider from "react-slick";
 const { Header, Footer, Sider, Content } = Layout;
 import { FaGreaterThan, FaLessThan } from "react-icons/fa";
 import { useState } from "react";
 import "../../Styles/Filter.less";
-import { RightOutlined } from "@ant-design/icons";
+import { RightOutlined,LeftOutlined } from "@ant-design/icons";
 const { Card } = antd;
 const { Meta } = Card;
-
+ const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 1
+    };
 const fitlerImtes = [
   { title: "Wearables" },
   { title: "Hoodle" },
@@ -22,126 +28,182 @@ const fitlerImtes = [
 const items = [
   {
     id: "1",
-    src: "../static/images/t.jfif",
+    src: "../static/images/t1.jpg",
     size: "M",
     title: "Baghdad",
     color: "Black",
   },
   {
     id: "2",
-    src: "../static/images/t.jfif",
+    src: "../static/images/t2.jpg",
     size: "L",
     title: "Batman",
     color: "red",
   },
   {
     id: "3",
-    src: "../static/images/t.jfif",
+    src: "../static/images/t3.jpg",
     size: "L",
     title: "Baghdad",
     color: "White",
   },
   {
     id: "4",
-    src: "../static/images/t.jfif",
+    src: "../static/images/t4.jpg",
     size: "S",
     title: "WonderWomen",
     color: "Black",
   },
   {
     id: "5",
-    src: "../static/images/t.jfif",
+    src: "../static/images/t5.jpg",
     size: "L",
     title: "Batman",
     color: "red",
   },
   {
     id: "6",
-    src: "../static/images/t.jfif",
+    src: "../static/images/t6.jpg",
     size: "M",
     title: "Baghdad",
     color: "Green",
   },
   {
     id: "7",
-    src: "../static/images/t.jfif",
+    src: "../static/images/t7.jpg",
     size: "M",
     title: "Baghdad",
     color: "Black",
   },
   {
     id: "8",
-    src: "../static/images/t.jfif",
+    src: "../static/images/t8.jpg",
     size: "L",
     title: "Batman",
     color: "red",
   },
   {
     id: "9",
-    src: "../static/images/t.jfif",
+    src: "../static/images/t9.jpg",
     size: "M",
     title: "Baghdad",
     color: "Green",
   },
 ];
+const Butns=({css})=>{
+  return<Slider  {...settings}>
+ <Button
+              key={1}
+              size="large"
+            id="card"
+              style={css}
+            >
+             one 
+            </Button>
+             <Button
+              key={1}
+              size="large"
+                id="card"
+          style={css}
+              
+            >
+             tow
+            </Button>
+             <Button
+              key={1}
+              size="large"
+            id="card"
+              style={css}
+            >
+           three
+            </Button>
+             <Button
+              key={1}
+              size="large"
+          id="card"
+              style={css}
+            >
+           four
+            </Button>
+             <Button
+              key={1}
+              size="large"
+            id="card"
+              style={css}
+            >
+            five
+            </Button>
+             <Button
+              key={1}
+              size="large"
+            id="card"
+              style={css}
+            >
+           six
+            </Button>
+             <Button
+              key={1}
+              size="large"
+            id="card"
+              style={css}
+            >
+            seven 
+            </Button>
 
-function Filter() {
-  const [currentItem, setCurrentItem] = useState(1);
-  const [itemperClick, setItemClick] = useState(5);
-  const prevItem = () => {
-    if (currentItem > 1) {
-      setCurrentItem(currentItem - 1);
-    }
-  };
 
-  const totalItem = Math.ceil(fitlerImtes.length / itemperClick);
+  </Slider>
+}
+export default class Filter extends React.Component {
+  state={
+     currentCard: 0,
+      position: 0,
+      cardStyle: {
+        transform: "translateX(0px)",
+         padding: "5px 70px",
+                fontWeight: "500",
+                margin:"0 5px"
+      },
+      width: 0,
+      count: 0,
+    margin:""
+  }
 
-  const nextItem = () => {
-    if (currentItem != totalItem) {
-      setCurrentItem(currentItem + 1);
-    }
-  };
-  let lastIndex = currentItem * itemperClick;
-  let firstIndex = lastIndex - itemperClick;
 
-  console.log(
-    "current",
-    +firstIndex + " * " + lastIndex
-    // itemperPage + " -" + lastIndex
-  );
+
+ 
+
+
+
+
+
+
+
+
+
+ render(){
+   let css=this.state.cardStyle
   return (
     <div className="filter_page">
       <div className="filter_head">
-        {currentItem === 1 ? null : (
-          <div className="fa_wrapper1" onClick={prevItem}>
-            <FaLessThan color="rgb(189, 186, 186)" size="20" />
-          </div>
-        )}
+        
+          {/* <div className="fa_wrapper1"
+     
+           >
+<LeftOutlined
+              style={{ fontSize: "20px", color: "rgb(189, 186, 186)" }}
+            />          </div> */}
+        
 
-        {fitlerImtes.slice(firstIndex, lastIndex).map((item, i) => {
-          return (
-            <Button
-              key={i}
-              size="large"
-              type={i === 0 ? "primary" : ""}
-              style={{
-                padding: "5px 40px",
-                // backgroundColor: i === 0 ? " #4d91ff" : "",
-                fontWeight: "500",
-                // color: i === 0 ? "white" : "rgb(189, 186, 186)",
-              }}
-            >
-              {item.title}
-            </Button>
-          );
-        })}
-        {currentItem === totalItem ? null : (
-          <div className="fa_wrapper2" onClick={nextItem}>
+     
+     	   <Carousel >  <div>sfofo</div> <div>sf222</div> <div>333</div><div>sfofo</div> <div>sf222</div> <div>333</div></Carousel>
+          {/* <div className="fa_wrapper2" 
+           
+          >
             <RightOutlined
               style={{ fontSize: "20px", color: "rgb(189, 186, 186)" }}
             />
-          </div>
-        )}
+          </div> */}
+      
       </div>
       <div className="card_wrapper">
         {items.map((item, i) => {
@@ -154,7 +216,9 @@ function Filter() {
                 width: "100%",
                 flex: "none",
                 borderRadius: 5,
-                height: "auto",
+                height: "85%",
+                 margin:0,
+            padding:0
               }}
               cover={
                 <img
@@ -163,12 +227,14 @@ function Filter() {
                   display="block"
                   border-radius="30px"
                   height="auto"
-                  object-fit="cover"
+                  border="none"
+                  style={ { objectfit:"cover"}}
+                
                   src={item.src}
                 />
               }
             >
-              <Meta title={item.title} />
+              {/* <Meta title={item.title} /> */}
               <div className="item_footer">
                 <p>{item.color} </p> <span>{item.size}</span>
               </div>
@@ -178,6 +244,6 @@ function Filter() {
       </div>
     </div>
   );
-}
+}}
 
-export default Filter;
+
