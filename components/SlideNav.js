@@ -64,7 +64,7 @@ function SlideNav(props) {
     <div>
       <div className="slideNav">
         <div className="slide_head">
-          <div className=" slide_icon">
+          <div className="slide_icon">
             <svg
               viewBox="64 64 896 896"
               focusable="false"

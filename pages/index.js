@@ -42,7 +42,7 @@ const index = () => {
 
       </div>
 
-      <FilterButtons/>  
+      
       {/* <div className="Main_container">
         <Filter />
         <SideWindow />

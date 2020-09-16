@@ -1,11 +1,12 @@
 import { Button } from "antd";
 import antd from "antd";
 import { Typography } from "antd";
-
+import SidePuPop from "../components/sidePoup";
 const { Text } = Typography;
 import { PlusOutlined, UpOutlined } from "@ant-design/icons";
 import Title from "antd/lib/skeleton/Title";
-const { Table, Card } = antd;
+import { useState } from "react";
+const { Table, Card,Row, Col,Tag  } = antd;
 
 const columns = [
   {
@@ -15,10 +16,22 @@ const columns = [
   {
     title: "Category",
     dataIndex: "Category",
-    sorter: {
-      compare: (a, b) => a.chinese - b.chinese,
-      multiple: 3,
-    },
+   
+       render: Category => (
+      <span>
+        {Category.map(Category => {
+          let color = Category.length > 5 ? 'green' : 'green';
+          if (Category === 'loser') {
+            color = 'green';
+          }
+          return (
+            <Tag color={color} key={Category}>
+              {Category.toUpperCase()}
+            </Tag>
+          );
+        })}
+      </span>
+    ),
   },
   {
     title: "Payee",
@@ -50,7 +63,7 @@ const data = [
   {
     key: "1",
     Title: "John Brown",
-    Category: "Rent...",
+    Category: ["Rent..."],
     Payee: "Munafio",
     Amount: "62,500 IQD",
     Data: "Mon ,Aug ..",
@@ -59,28 +72,41 @@ const data = [
 {
 }
 const Expanses = () => {
+  const [show,setShow] =useState(false)
   const onChange = (pagination, filters, sorter, extra) => {
     console.log("params", pagination, filters, sorter, extra);
   };
+  const showPopup=()=>{
+     setShow(!show)
+     console.log("showwho wofwo",);
+  }
   return (
     <div className="content">
       <Button
         type="primary"
         style={{ marginBottom: "15px", backgroundColor: "#1890ff" }}
         icon={<PlusOutlined />}
+        onClick={showPopup}
       >
         Add Expenses
       </Button>
 
-      <div className="content_inner">
-        <Table
+      <div className="content_innefr">
+ <Row style={{display:"flex",flexFlow:"row",flexWrap:"wrap"}}>
+     <Col  style={{maxWidth:"100%",flex:"1 1 100px",paddingRight:"20px"}}>
+      <Table
           columns={columns}
           dataSource={data}
           onChange={onChange}
           className="table"
-        />
-        <div className="cards">
-          <Card className="card">
+          
+          pagination={false} />
+
+      
+    </Col>
+    <Col style={{paddingRight:"20px",flex:"0 1 400px"}}>
+     <div className="cards">
+          <Card className="card" style={{width:"100%"}}>
             <div className="card_icon">
               <svg
                 viewBox="64 64 896 896"
@@ -103,7 +129,7 @@ const Expanses = () => {
               </p>
             </div>
           </Card>
-          <Card className="card">
+          <Card className="card"style={{width:"100%"}}>
             <div className="card_icon">
               <svg
                 viewBox="64 64 896 896"
@@ -126,7 +152,12 @@ const Expanses = () => {
               </p>
             </div>
           </Card>
-        </div>
+        </div> 
+    </Col>
+  
+  </Row>,
+  {show?<SidePuPop handleClose={showPopup}/>:null}
+        
       </div>
     </div>
   );
