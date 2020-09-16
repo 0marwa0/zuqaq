@@ -8,6 +8,7 @@ import {
 } from "@ant-design/icons";
 import Filter from "../pages/Filter";
 const { SubMenu } = Menu;
+import { AiOutlineLineChart } from "react-icons/ai";
 
 import Link from "next/link";
 import "../Styles/style.less";
@@ -15,7 +16,7 @@ import SlideNav from "../components/SlideNav";
 import SideWindow from "../pages/SideWindow.js";
 import NavBar from "../components/NavBar";
 import { useState } from "react";
-import Graph from "./Graph";
+import Graph from "./GraphUi/Graph.js";
 // const { Layout, Menu, Breadcrumb } = antd;
 // const { UserOutlined, LaptopOutlined, NotificationOutlined } = icons;
 
@@ -74,8 +75,20 @@ const index = () => {
       {/* <SlideNav fun={showProgrss} /> */}
       {/**graph ui */}
       <div className="Main_container">
+        <div>
         <NavBar fun={showProgrss} />
-        <div id="sildeNav"></div>
+        <div id="sildeNav">
+
+          <div>
+            
+           <sapn 
+           
+           
+           > <AiOutlineLineChart color="white" /></sapn>
+          
+          Dashboard</div>
+          <div></div>
+        </div></div>
 
         <Graph />
       </div>
