@@ -15,7 +15,7 @@ const { SubMenu } = Menu;
 
 import Link from "next/link";
 import "../Styles/style.less";
-import SlideNav from "../components/SlideNav";
+import SlideNavChart from "../components/SlideNavchart";
 import SideWindow from "../pages/SideWindow.js";
 import NavBar from "../components/NavBar";
 import { useState } from "react";
@@ -84,7 +84,7 @@ const index = () => {
       {/* https://codesandbox.io/s/async-breeze-jxsd4?file=/src/index.js */}
       {show ? <div className="progres_bar"></div> : null}
       <NavBar fun={showProgrss} />
-      <SlideNav fun={showProgrss} />
+      <SlideNavChart fun={showProgrss} />
     </div>
   );
 };
