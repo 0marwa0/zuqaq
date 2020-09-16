@@ -37,10 +37,10 @@ const index = () => {
 
   return (
     <div>
-      <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
+      {/* <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
         <h1>still working on it ...</h1>
 
-      </div>
+      </div> */}
 
       
       {/* <div className="Main_container">
@@ -82,9 +82,9 @@ const index = () => {
         </Footer>
       </Layout> */}
       {/* https://codesandbox.io/s/async-breeze-jxsd4?file=/src/index.js */}
-      {/* {show ? <div className="progres_bar"></div> : null}
+      {show ? <div className="progres_bar"></div> : null}
       <NavBar fun={showProgrss} />
-      <SlideNav fun={showProgrss} /> */}
+      <SlideNav fun={showProgrss} />
     </div>
   );
 };

@@ -6,6 +6,7 @@ const { Text } = Typography;
 import { PlusOutlined, UpOutlined } from "@ant-design/icons";
 import Title from "antd/lib/skeleton/Title";
 import { useState } from "react";
+import { FaPlus } from "react-icons/fa";
 const { Table, Card,Row, Col,Tag  } = antd;
 
 const columns = [
@@ -82,29 +83,49 @@ const Expanses = () => {
   }
   return (
     <div className="content">
-      <Button
-        type="primary"
-        style={{ marginBottom: "15px", backgroundColor: "#1890ff" }}
-        icon={<PlusOutlined />}
-        onClick={showPopup}
-      >
-        Add Expenses
-      </Button>
+      
 
       <div className="content_innefr">
  <Row style={{display:"flex",flexFlow:"row",flexWrap:"wrap"}}>
-     <Col  style={{maxWidth:"100%",flex:"1 1 100px",paddingRight:"20px"}}>
+
+     <Col  style={{maxWidth:"100%",flex:"1 1 100px",
+     display:"flex",flexDirection:"column",
+     
+     padding:"10px"}}>
+       <div>
+       <Button
+        type="primary"
+        style={{ marginBottom: "15px", backgroundColor: "#1890ff",
+        display:"flex",alignItems:"center"}}
+       
+        onClick={showPopup}
+      >
+       < FaPlus style={{marginRight:"7px"}}/> Add Expenses
+      </Button>
+</div>
       <Table
           columns={columns}
           dataSource={data}
           onChange={onChange}
           className="table"
-          
-          pagination={false} />
+        
+          pagination={{
+                   
+                    total: 20,
+                    style:{padding:"0 20px",fontWeight:"500"},
+                    // pageSizeOptions: ["10", "20", "50"],
+                    
+                    showTotal: total => `View search for 1 from 2 search we got.`,
+                    
+                    // showSizeChanger: true,
+                     
+                  
+                  }}
+         />
 
       
     </Col>
-    <Col style={{paddingRight:"20px",flex:"0 1 400px"}}>
+    <Col style={{paddingLeft:"10px",paddingRight:"20px",marginTop:"5%",flex:"0 1 400px",}}>
      <div className="cards">
           <Card className="card" style={{width:"100%"}}>
             <div className="card_icon">
