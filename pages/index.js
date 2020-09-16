@@ -37,10 +37,10 @@ const index = () => {
 
   return (
     <div>
-      {/* <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
+      <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
         <h1>still working on it ...</h1>
 
-      </div> */}
+      </div>
 
       <FilterButtons/>  
       {/* <div className="Main_container">

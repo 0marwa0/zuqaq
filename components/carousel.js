@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { Carousel, Button } from "antd";
 
 // import "./styles.css";
- import "antd/dist/antd.css";
+//  import "antd/dist/antd.css";
 
 class FilterButtons extends React.Component {
     constructor(props) {
