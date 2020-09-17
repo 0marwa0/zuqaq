@@ -9,6 +9,7 @@ export default class MyDocument extends Document {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
+          <link href="//db.onlinewebfonts.com/c/175bb37214e59d8e24ee6ea635b2eeff?family=Px+Grotesk+Bold" rel="stylesheet" />
         </Head>
         <body>
           <Main />

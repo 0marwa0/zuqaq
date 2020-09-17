@@ -49,15 +49,32 @@
 }
 .item_footer {
   display: flex;
-  flex-direction: row;
-  padding: 5px 0;
-  font-weight: bold;
+  flex-direction: column;
 
+  font-weight: bold;
   color: rgb(201, 194, 194);
+  height: 60px;
+
+  margin: 0px !important;
+  background-color: white;
+  border-bottom: 1px solid rgb(201, 194, 194);
+  border-left: 1px solid rgb(201, 194, 194);
+  border-right: 1px solid rgb(201, 194, 194);
+  border-radius: 0px 0px 5px 5px;
   justify-content: space-between;
+}
+.itme-title- {
+  font-size: 18px !important;
+  color: black !important;
+
+  margin: 0 !important;
+  font-weight: bold;
 }
 .item_footer span {
   color: #4d91ff;
+}
+.Item-Text {
+  font-size: 20px;
 }
 .card_wrapper {
   display: grid;
@@ -67,8 +84,8 @@
   flex-direction: row;
   height: auto;
   width: 100%;
-  row-gap: 35px;
-  row-gap: 0;
+  row-gap: 30px;
+
   padding-bottom: 20%;
 }
 /****window***/
@@ -131,7 +148,7 @@
   align-items: center;
   background-color: #fafbfc;
 
-  grid-template-columns: 0.2fr auto auto auto;
+  grid-template-columns: auto auto auto auto;
   border-bottom: 1px solid #e8ebed;
 }
 
@@ -192,11 +209,11 @@
   font-size: large;
   justify-content: center;
 }
-@media only screen and (max-width: 1248px) {
-  .window_page {
-    width: 55%;
-  }
-}
+// @media only screen and (max-width: 1248px) {
+//   .window_page {
+//     width: 55%;
+//   }
+// }
 @media only screen and (max-width: 758px) {
   .window_page {
     width: 65%;
@@ -205,5 +222,10 @@
 @media only screen and (max-width: 618px) {
   .window_page {
     width: 75%;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .window_page {
+    width: 36%;
   }
 }

@@ -43,7 +43,7 @@ const index = () => {
       </div> */}
 
       
-      {/* <div className="Main_container">
+      <div className="Main_container">
         <Filter />
         <SideWindow />
       </div>
@@ -80,11 +80,11 @@ const index = () => {
             <Button style={{backgroundColor:"#3b86ff",color:"white",border:"none"}}>checkout</Button>
           </div>
         </Footer>
-      </Layout> */}
+      </Layout>
       {/* https://codesandbox.io/s/async-breeze-jxsd4?file=/src/index.js */}
-      {show ? <div className="progres_bar"></div> : null}
+      {/* {show ? <div className="progres_bar"></div> : null}
       <NavBar fun={showProgrss} />
-      <SlideNav fun={showProgrss} />
+      <SlideNav fun={showProgrss} /> */}
     </div>
   );
 };

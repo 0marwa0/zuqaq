@@ -37,7 +37,7 @@ function index() {
       </div>
       <div className="item_container">
         <div className="window_item">
-          <img width="90px" height="auto" src="../static/images/t6.jpg" />
+          <img width="70px" height="50px" src="../static/images/t2.jpg" />
           <div className="window_text">
             <span>
               Araq nas , white <span style={{ color: "#c5c7c9" }}>-FS </span>
@@ -64,7 +64,7 @@ function index() {
         </div>
 
         <div className="window_item">
-          <img width="90px" height="auto" src="../static/images/t5.jpg" />
+          <img width="70px" height="50px"  src="../static/images/t3.jpg" />
           <div className="window_text">
             <span>
               Araq nas , white <span style={{ color: "#c5c7c9" }}>-FS </span>
@@ -98,6 +98,7 @@ function index() {
             </Button>
           </Dropdown>
         </div>
+ 
         <div className="check">
           <ul>
             <li>Sub-total:</li>
