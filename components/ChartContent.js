@@ -5,13 +5,13 @@ import { BarChartOutlined, DownOutlined, UserOutlined } from "@ant-design/icons"
  import LinerChart from "./LinerChart";
 const { Menu, Dropdown, Button } = antd;
 import { FaUsers } from "react-icons/fa";
-
+import { HiOutlineArrowCircleUp} from "react-icons/hi";
 import { PlusOutlined, UpOutlined } from "@ant-design/icons";
 import Title from "antd/lib/skeleton/Title";
 import { useState } from "react";
 import { FaPlus } from "react-icons/fa";
 import  "../Styles/graph.less";
-
+import Hello from "./BarChart";
 
  import {Dunt,Bars} from './BarChart';
  
@@ -66,7 +66,7 @@ const ChartContent = () => {
         
       }}>
         <div className="card_icon">
-          <FaUsers />
+          <HiOutlineArrowCircleUp size={30} color="blue" />
         </div>
         <span>2,660,000 IQD</span>
         <div className="card_footer">
@@ -83,7 +83,7 @@ const ChartContent = () => {
         border:"none"
       }}>
         <div className="card_icon">
-          <FaUsers />
+          <FaUsers size={30} />
         </div>
         <span>500</span>
         <div className="card_footer">
@@ -102,7 +102,7 @@ const ChartContent = () => {
 <LinerChart/></div>
     </Col>
     <Col style={{
-       height:"5%",
+       maxHeight:"2%",
      display:"flex",
       marginRight:" 20px",
       marginLeft:"10px",
@@ -126,17 +126,28 @@ const ChartContent = () => {
 <p>Top sold in December</p>
 
 <div style={{display:"flex",gap:"10px",height:"100%"}}>
-<div style={{backgroundColor:"#e8ebed",width:"50%",height:"100%"}}>
-Baghdadai
+<div style={{
+textAlign:"center",
+position:"relative",
+  backgroundColor:"#e8ebed",width:"50%",height:"100%"}}>
+    <p style={{position:"absolute", padding:"5px",bottom:0}} >
+     <p> Baghdadai</p>
+     
+       </p>
+
 </div>
-<div style={{backgroundColor:"#e8ebed",width:"50%",height:"100%"}}>
-    Tuktuk
+<div style={{width:"50%",height:"100%",display:"flex"
+,flexDirection:"column",gap:"3%"}}>
+    
+    <div className="squer_big" style={{position:"relative"}}><p style={{ padding:"5px",position:"absolute",bottom:0}}>Tuktuk</p></div>
+    <div className="squer_item">
+      <div></div><div></div><div></div></div>
 </div>
 </div>
     </Col>
  <Col style={{
      
-         flex:"1 0 100px",
+         flex:"1 0 150px",
           padding:"10px",
          maxWidth:"100%",
         maxHeight:"100%",
@@ -147,25 +158,35 @@ Baghdadai
         borderRadius:"5px"
         }}><p>Low stock</p>
 
-    <div className="stock_chart"> Tuktuk in Xl</div>
-     <div className="stock_chart1"> 25 OCT in XL</div>
-      <div className="stock_chart2"> Safaa in Xl</div>
+    <div className="stock_chart"><span>Tuktuk </span>  <span>in Xl</span></div>
+     <div className="stock_chart1"> <span>25 OCT </span><span>in Xl</span></div>
+      <div className="stock_chart2"><span> Safaa</span> <span>in Xl</span></div>
 </Col>
             <Col style={{
-         flex:"1 0 150px",
+         flex:"1 0 210px",
          padding:"10px",
          whiteSpace: "nowrap",
          marginTop:"10px",
+         alignItems:"center",
+         justifyContent:"center",
         border:"1px solid #e8ebed",
         borderRadius:"5px",
-        maxWidth:"100%",
-       maxHeight:"100%",
-       position:"relative"
+     
       
-        }}>
+        }}> 
+        <p>Inventory cost</p>
+   <div style={{display:"inline-block",width:"50%",
+   height:"70%",
+  }}>
+          <Hello/>
+          </div>
+         <div style={{display:"inline-block",width:"50% "
+         }} className="chart_css">
+           <Bars/>
+           </div>
 
-     <div style={{display:"inline-block",width:"50%" }} className="chart_css"><Bars/></div>
-      <div style={{display:"inline-block",width:"50%" }}className="chart_css"><Dunt/></div> 
+  {/* <div style={{display:"inline-block",width:"50%",backgroundColor:"blue" }}className="chart_css"><Dunt/></div>  */}
+    
 
         </Col>
 

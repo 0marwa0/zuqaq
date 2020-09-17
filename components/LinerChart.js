@@ -90,7 +90,7 @@ class LinerChart extends React.Component {
   render() {
     return (
       <div>
-        <canvas height="80"  />
+        <canvas height="80"   />
         <div className="text-center">
           {/* <button className="btn btn-primary" onClick={this.toggleChart}>Toggle</button> */}
         </div>
